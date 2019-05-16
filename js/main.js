@@ -1,21 +1,29 @@
 
 
+
+	
+
 $(document).ready(function() {
+    // Codigo a ejecutarse una vez que se carga la pagina
+
+    // $("#posts-container").html("<h1>Hola jQuery</h1>");
     
-    
-    $(".btn btn-primary").click(function() {
+    $("#publicar1").click(function() {
         $("#postnuevo").append(
-                    '<h4 class="card-title">' + 
+            '<div>' +
+                '<div>' +
+                    '<h4>' + 
                         $("#titulo").val() +
                     '</h4>' +
-                    '<p class="card-text">' +
-                        $("#post").val() +
-                    '</p>'
+                    '<p>' +
+                        $("#texto").val() +
+                    '</p>' +
+                '</div>' +
+            '</div>' + '<button type="button" class="btn btn-primary" id="publicar2">Publicar</button>'
         );
     });
 
 });
-	
 
 
 
@@ -35,3 +43,4 @@ $(document).ready(function() {
 //console.log toma un valor y lo muestra en consola
 
 //console.log('hola 123');
+
