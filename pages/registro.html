@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../estilos/registro.css">
+  <link rel="stylesheet" type="text/css" href="../estilos/nav.css">
 	<title>Registro</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
 <!-- nav -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Nombre</a>
+  <a class="navbar-brand" href="home.html">Nombre</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,11 +31,11 @@
 
     <!-- botón login -->
 
-<button class="btn btn-primary" data-toggle="modal" data-target="modal-login">
+  <button class="btn btn-outline-primary" data-toggle="modal" data-target=".modal-login" id="margen-login">
     Iniciar sesión
   </button>
 
-  <div class="modal fade modalogin" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  <div class="modal fade modal-login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -46,21 +46,18 @@
 
                 <form>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Correo Electronico </label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                      placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                      else.</small>
+                    <label for="login-usuario">Nombre de usuario:</label>
+                    <input type="text" class="form-control" id="login-usuario">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="login-password">Password</label>
+                    <input type="password" class="form-control" id="login-password">
                   </div>
                   <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <input type="checkbox" class="form-check-input" id="no-cerrar">
+                    <label class="form-check-label" for="exampleCheck1">No cerrar sesión</label>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="boton-entrar">Entrar</button>
                 </form>
               </div>
 
@@ -76,11 +73,49 @@
 
     <!-- botón registro -->
 
-    <button class="btn btn-primary form-inline" data-toggle="modal" data-target=".modal-registro">
+    <button class="btn btn-primary form-inline" data-toggle="modal" data-target=".modal-registro" id="margen-registro">
       Registrate
     </button>
+    <div class="modal fade modal-registro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="conteiner-fluid">
+            <div class="row">
+              <div class="col-6">
 
-    <!-- fin botón registro -->
+                acá va la imagen 
+            
+              </div>
+
+
+      <!-- formulario de registro -->
+
+              <div class="formulario-registro">
+                  <form role="form">
+                  <h3>Registro</h3><br>
+                  <div class="form-group">
+                    <label for="registro-usuario">Nombre de usuario:</label>
+                    <input type="text" class="form-control" id="registro-usuario">
+                  </div>
+                  <div class="form-group">
+                    <label for="registro-email">Dirección de email:</label>
+                    <input type="email" class="form-control" id="registro-email">
+                  </div>
+                  <div class="form-group">
+                    <label for="registro-pw">Contraseña:</label>
+                    <input type="password" class="form-control" id="registro-pw">
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="boton-registro">Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fin formulario registro -->
+
 
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
@@ -89,62 +124,25 @@
   </div>
 </nav>
 
+
+
+
 <!-- fin navbar-->
 
-<!-- Large modal -->
-<button class="btn btn-primary" data-toggle="modal" data-target=".modal-registro">
-  Registrate
-</button>
-
-<div class="modal fade modal-registro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="conteiner-fluid">
-        <div class="row">
-          <div class="col-6">
-
-           acá va la imagen 
-            
-          </div>
 
 
-          <!-- formulario de registro -->
 
-          <div class="formulario-registro">
-            <form role="form">
-              <h3>Registro</h3><br>
-              <div class="form-group">
-                <label for="nombre-usuario">Nombre de usuario:</label>
-                <input type="text" class="form-control" id="nombre-usuario">
-              </div>
-              <div class="form-group">
-                <label for="email">Dirección de email:</label>
-                <input type="email" class="form-control" id="email">
-              </div>
-              <div class="form-group">
-                <label for="pwd">Contraseña:</label>
-                <input type="password" class="form-control" id="pwd">
-              </div>
-              <!-- <div class="checkbox">
-                <label><input type="checkbox"> Remember me</label>
-              </div> -->
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-
-
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<!-- <script type="text/javascript" src="../js/registro.js"></script> -->
+
+
+
 
 </body>
 </html>

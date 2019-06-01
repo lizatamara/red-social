@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../estilos/home.css">
 	<title>Home</title>
@@ -10,7 +11,7 @@
 <!-- nav -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Nombre</a>
+  <a class="navbar-brand" href="home.html">Nombre</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,12 +28,106 @@
         <a class="nav-link" href="#">Link3</a>
       </li>
     </ul>
+
+    <!-- botón login -->
+
+  <button class="btn btn-outline-primary" data-toggle="modal" data-target=".modal-login" id="margen-login">
+    Iniciar sesión
+  </button>
+
+  <div class="modal fade modal-login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-10 offset-1">
+
+                <form>
+                  <div class="form-group">
+                    <label for="login-usuario">Nombre de usuario:</label>
+                    <input type="text" class="form-control" id="login-usuario">
+                  </div>
+                  <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" class="form-control" id="login-password">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="no-cerrar">
+                    <label class="form-check-label" for="exampleCheck1">No cerrar sesión</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="boton-entrar">Entrar</button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- fin botón login -->
+
+    <!-- botón registro -->
+
+    <button class="btn btn-primary form-inline" data-toggle="modal" data-target=".modal-registro" id="margen-registro">
+      Registrate
+    </button>
+    <div class="modal fade modal-registro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="conteiner-fluid">
+            <div class="row">
+              <div class="col-6">
+
+                acá va la imagen 
+            
+              </div>
+
+
+      <!-- formulario de registro -->
+
+              <div class="formulario-registro">
+                  <form role="form">
+                  <h3>Registro</h3><br>
+                  <div class="form-group">
+                    <label for="registro-usuario">Nombre de usuario:</label>
+                    <input type="text" class="form-control" id="registro-usuario">
+                  </div>
+                  <div class="form-group">
+                    <label for="registro-email">Dirección de email:</label>
+                    <input type="email" class="form-control" id="registro-email">
+                  </div>
+                  <div class="form-group">
+                    <label for="registro-pw">Contraseña:</label>
+                    <input type="password" class="form-control" id="registro-pw">
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="boton-registro">Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fin formulario registro -->
+
+
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
     </form>
   </div>
 </nav>
+
+
+
+
+<!-- fin navbar-->
 
 <!-- publicaciones -->
 
@@ -152,6 +247,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/main.js"></script>
+
+
 
 
 </body>
